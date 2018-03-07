@@ -5,7 +5,7 @@
 
 body {
   display: flex;
-  width: 100%;
+  width: auto;
   font-family: MaisonNeue, sans-serif;
   flex-direction: column;
   justify-content: space-around;
@@ -20,6 +20,10 @@ header {
   border-bottom: 1px solid #282828;
   padding-bottom: 10px;
   background-color: white;
+}
+
+.container {
+  width: 1120px;
 }
 
 .main-nav {
@@ -40,8 +44,10 @@ header {
   padding: 15px;
 }
 
-.logo {
-  height: 20px;
+.logo-container .logo {
+  width: auto !important;
+  height: 60px !important;
+  border-radius: 0 !important;
 }
 
 .search-box {
@@ -54,9 +60,9 @@ header {
 
 .campaign-title {
   background-color: #fbfbfa;
-  border: 1px solid #2f2f2f;
-  width: 1248px;
-  height: 240px;
+  // border: 1px solid #2f2f2f;
+  width: 100%;
+  height: auto;
 }
 
 .video-player-container {
@@ -65,28 +71,28 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #fbfbfa;
-  border: 1px solid #2f2f2f;
-  width: 1248px;
+  // border: 1px solid #2f2f2f;
+  width: auto;
   height: 572px;
 }
 
 .video {
   border: 1px solid #2f2f2f;
-  width: 823px;
+  width: 70%;
   height: 100%;
 }
 
 .pledge-info {
-  border: 1px solid #2f2f2f;
-  width: 425px;
+  // border: 1px solid #2f2f2f;
+  width: 30%;
   height: 100%;
 }
 
 .submenu {
   display: flex;
   padding-top: 10px;
-  border-top: 1px solid #dddedd;
-  border-bottom: 1px solid #dddedd;
+  // border-top: 1px solid #dddedd;
+  // border-bottom: 1px solid #dddedd;
   height: 71px;
   width: 100%;
   background-color: white;
@@ -95,7 +101,7 @@ header {
 .second-nav {
   display: flex;
   flex-direction: row;
-  width: 850px;
+  width: 100%;
   margin: 0 auto;
   align-items: center;
 }
@@ -105,27 +111,26 @@ header {
 }
 
 .project-display {
-  width: 1045px;
-  height: 100%;
+  width: auto;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  border: 1px solid #2f2f2f;
+  // border: 1px solid #2f2f2f;
 }
 
 .project-info {
-  border: 1px solid black;
+  // border: 1px solid black;
   display: flex;
   flex-direction: column;
-  width: 684px;
+  width: 70%;
   height: auto;
 }
 
 .pledge {
-  border: 1px solid black;
+  // border: 1px solid black;
   display: flex;
   flex-direction: column;
-  width: 361px;
+  width: 30%;
   height: auto;
 }

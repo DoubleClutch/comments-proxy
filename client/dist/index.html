@@ -2,64 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/main.css">
     <title>FECDemo</title>
   </head>
   <body>
     <script src="/lib/react.development.js"></script>
     <script src="/lib/react-dom.development.js"></script>
-    <header>
-        <nav class="main-nav">
-            <div class="basic-nav">
-                <span class="nav-button">Explore</span>
-                <span class="nav-button">Start a project</span>
-            </div>
-            <div class="logo-container">
-                <img class='logo' src="./images/logoResized.png" />
-            </div>
-            <div class="search-box">
-                <span class="nav-button search">Search</span>
-                <span class="nav-button sign-in">Sign-In</span>
-            </div>
-        </nav>
-    </header>
-    <section id="campaign-title" class="campaign-title"></section>
-    <section class="video-player-container">
-        <div class="video"></div>
-        <div id="pledge-info" class="pledge-info"></div>
-    </section>
-    <section class="submenu">
-        <nav class="second-nav">
-            <span class="submenu-button">Campaign</span>
-            <span class="submenu-button">FAQ</span>
-            <span class="submenu-button">Updates</span>
-            <span class="submenu-button">Comments</span>
-            <span class="submenu-button">Community</span>
-        </nav>
-    </section>
-    <section class="project-display">
-        <div class="project-info">
-            <div class="campaign"></div>
-            <div class="faq"></div>
-            <div id="updates" class="updates"></div>
-            <div id="comments" class="comments"></div>
-            <div class="community"></div>
-        </div>
-        <div id="pledge-support" class="pledge"></div>
-    </section>
-
+    <div id="app"></div>
     <!-- <div id="pledge-info"></div> -->
     <!-- <div id="comments"></div> -->
     <script src="http://localhost:3001/bundle.js"></script>
-    <script src="http://localhost:3003/bundle.js"></script>
+    <script src="http://127.0.0.1:3300/bundle.js"></script>
+    <script src="http://127.0.0.1:3003/index_bundle.js"></script>
     <script src="http://localhost:3004/bundle.js"></script>
-    <script src="http://localhost:3300/bundle.js"></script>
+    <!-- <script src="http://localhost:3300/index_bundle.js"></script> -->
     <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
+    <script src="http://localhost:8000/bundle.js"></script>
     <script>
       ReactDOM.render(
-        React.createElement(Comments, {id: window.location.pathname.slice(1, window.location.pathname.length - 1)}),
-        document.getElementById('comments')
+        React.createElement(App),
+        document.getElementById('app')
       );
+      // ReactDOM.render(
+      //   React.createElement(Comments, {id: window.location.pathname.slice(1, window.location.pathname.length - 1)}),
+      //   document.getElementById('comments')
+      // );
+      // ReactDOM.render(
+      //   React.createElement(Navbar),
+      //   document.getElementById('navbar')
+      // );
+      // ReactDOM.render(
+      //   React.createElement(CampaignHeader, {idFromURL: window.location.pathname.slice(1, window.location.pathname.length - 1)}),
+      //   document.getElementById('campaign-title')
+      // );
+      // ReactDOM.render(
+      //   React.createElement(VideoPlayer, {idFromURL: window.location.pathname.slice(1, window.location.pathname.length - 1)}),
+      //   document.getElementById('campaign-video')
+      // );
+      // ReactDOM.render(
+      //   React.createElement(AboutContainer, {idFromURL: window.location.pathname.slice(1, window.location.pathname.length - 1)}),
+      //   document.getElementById('campaign-about')
+      // );
       // ReactDOM.render(
       //   React.createElement(PledgeInfo, {id: window.location.pathname.slice(1, window.location.pathname.length - 1)}),
       //   document.getElementById('pledge-info')
@@ -69,10 +51,9 @@
       //   document.getElementById('pledge-support')
       // );
       // ReactDOM.render(
-      //   React.createElement(Homepage, {id: window.location.pathname.slice(1, window.location.pathname.length - 1)}),
+      //   React.createElement(Updates, {id: window.location.pathname.slice(1, window.location.pathname.length - 1)}),
       //   document.getElementById('updates')
       // );
     </script>
-    <script src="bundle.js"></script>
   </body>
 </html>
